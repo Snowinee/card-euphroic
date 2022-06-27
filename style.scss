@@ -1,0 +1,176 @@
+:root {
+    --textColor: white;
+    --mainBgColor: rgb(133, 30, 102); 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+	height: 100vh;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+main {
+    // background-color: red;
+    min-height: 100vh;
+    padding: 30px;
+
+    .container {
+        box-shadow: 10px -3px 50px 1px rgba(42, 5, 77, 0.589);
+        overflow: hidden;
+        max-width: 350px;
+        margin: 30px auto;
+        border-radius: 15px;
+        background-image: linear-gradient(
+            325deg,
+            hsl(240deg 100% 20%) 0%,
+            hsl(295deg 100% 19%) 18%,
+            hsl(320deg 100% 27%) 27%,
+            hsl(336deg 79% 37%) 34%,
+            hsl(356deg 51% 51%) 40%,
+            hsl(15deg 60% 55%) 47%,
+            hsl(28deg 66% 58%) 56%,
+            hsl(40deg 65% 62%) 68%,
+            hsl(57deg 58% 68%) 82%,
+            hsl(83deg 89% 82%) 100%
+          );
+
+        #profilePicture {
+            width: 350px;
+            height: 350px;
+            background-image: url("https://media.discordapp.net/attachments/984910220838985738/991064477820665887/IMG_0227.JPG?width=268&height=476");
+            background-position: center;
+            border: none;
+            background-repeat: no-repeat;
+            border-radius: 15px 15px 0 0;
+            background-size: cover;
+        }
+
+        h1 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+            text-align: center;
+            color: var(--textColor);
+            text-shadow: 2px 3px rgb(161, 69, 126);
+        }
+        p {
+            text-align: center;
+            color: var(--textColor);
+            font-size: 1rem;
+            margin-top: -5px;
+        }
+        a {
+            text-align: center;
+            display: block;
+            text-decoration: none;
+            font-size: .7rem;
+            margin-top: 7px;
+            color: #ffd7f5;
+        }
+
+        .discordBtn {
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+            
+            button {
+                padding: 10px 50px;
+                border-radius: 6px;
+                background-color: rgb(29, 119, 255);
+                border: none;
+                color: var(--textColor);
+                display: flex;
+                cursor: pointer;
+                transition: all .3s;
+                
+                 i {
+                    margin-right: 5px;
+                 }
+            }
+
+            button:hover {
+                box-shadow: 5px 0px 10px 1px rgba(67, 86, 250, 0.822);
+                transform: scale(1.1);
+            }
+        }
+
+        .aboutSection, .interestSection {
+            margin: 15px 25px;
+
+            h3 {
+                color: var(--textColor);
+            }
+            p {
+                text-align: left;
+                font-size: .8rem;
+                margin-top: 1px;
+                font-weight: 300;
+            }
+        }
+
+        footer {
+            position: relative;
+            display: flex;
+            bottom: 0;
+            width: 100%;
+            height: 60px;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background-color: rgba(34, 2, 56, 0.664);
+            border-radius: 0 0 15px 15px;
+
+            i {
+                color: var(--textColor);
+                font-size: 1.7rem;
+                transition: all 0.5s;
+            }
+
+            i:hover {
+                transform: scale(1.3) rotate(360deg);
+                color: #9257ff;
+            }
+
+            .fa-tiktok:hover {
+                color: black;
+            }
+
+            .fa-spotify:hover {
+                color: #6ae96a;
+            }
+
+            .fa-youtube:hover {
+                color: rgb(255, 0, 0);
+            }
+
+            .fa-discord:hover {
+                color: rgba(67, 86, 250, 0.822);
+            }
+            .fa-instagram:hover {
+                background: radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+            }
+        }
+    }
+}
